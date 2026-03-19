@@ -1,8 +1,8 @@
 import { GoogleGenAI, type FunctionDeclaration, Type } from "@google/genai";
 import { db } from "../db";
 
-const apiKey = process.env.GEMINI_API_KEY;
-const ai = new GoogleGenAI({ apiKey: apiKey! });
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+const ai = new GoogleGenAI({ apiKey: apiKey || "" });
 
 const listCategoriesTool: FunctionDeclaration = {
   name: "listCategories",

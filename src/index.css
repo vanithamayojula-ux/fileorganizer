@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
-
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  
-  /* Material 3 Colors (Zinc-based) */
-  --color-m3-surface: #f4f4f5;
-  --color-m3-surface-container: #e4e4e7;
-  --color-m3-primary: #18181b;
-  --color-m3-on-primary: #ffffff;
-  --color-m3-secondary: #71717a;
-  --color-m3-on-secondary: #ffffff;
-  --color-m3-error: #ef4444;
-}
+@config "../tailwind.config.js";
 
 @layer base {
   * {
