@@ -9,10 +9,12 @@ import {
   signInWithPhoneNumber
 } from 'firebase/auth';
 import { getFirestore, doc, getDocFromServer } from 'firebase/firestore';
-import firebaseConfig from '../firebase-applet-config.json';
+
+// Use the Firebase configuration from environment variables defined in vite.config.ts
+const firebaseConfig = process.env.FIREBASE_CONFIG || {};
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig as any);
 export const auth = getAuth(app);
 export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
 export const googleProvider = new GoogleAuthProvider();
